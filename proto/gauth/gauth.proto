@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package auth;
 
-option go_package = "";
+option go_package = "grpc.auth.v1;gauthv1";
 
 service Auth {
     rpc SignUp (SignUpRequest) returns (SignUpResponse);
@@ -29,6 +29,7 @@ message Token {
     string token = 1;
 }
 
+// uuid v4
 message Uuid {
     bytes value = 1;
 }
